@@ -36,3 +36,10 @@ app.get('/',(req, res)=>{
         "message":"it's working"
     })
 })
+
+app.get('*',(req, res)=>{
+    res.json({
+        "status":false,
+        "message":"not found"
+    })
+})
